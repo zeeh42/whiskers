@@ -3,6 +3,12 @@ import sprites as S
 from tools import *
 from pathlib import Path
 
+class MenuManager:
+    currentMenu = ""
+    def setMenu(self, menu):
+        self.currentMenu = menu
+    
+
 class level:
     def __init__(self):
         self.outOfIndexTile = S.Void()
