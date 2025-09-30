@@ -31,12 +31,14 @@ levers and pistons (levers and buttons to interact with shit)
 +--------level---------+
 tile sprites / tile key
 level loading
-print level (needs player)
+
 
 +=======DONE=============+
 
 +--------level---------+
 get tile
 set tile
+print level (will need update for npcs)
+never gonna give you up
 
 +=======NOT GONNA DO=====+

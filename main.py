@@ -40,7 +40,7 @@ class level:
 
     def getLevelAsPrint(self, player):
         printLevel = self.level
-        #printLevel = self.setTile(player.x, player.y, printLevel)
+        printLevel = self.setTile(player.x, player.y, printLevel, player)
 
         stringToReturn = ""
         for i, line in enumerate(printLevel):
@@ -51,5 +51,6 @@ class level:
         return stringToReturn
 
 level = level()
+player = S.Player(x=1, y=1, maxHealth=100, inventory=None)
 level.loadLevel(Path("level/test.level"))
-print(level.getLevelAsPrint(None))
+print(level.getLevelAsPrint(player))

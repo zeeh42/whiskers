@@ -28,12 +28,26 @@ class Void(Tile):
     walkable=False
     interactable=False
 
+class Inventory:
+    pointsTo=None
+
+class Player:
+    def __init__(self, x, y, maxHealth, inventory:Inventory):
+        self.maxHealth = maxHealth
+        self.health = maxHealth
+        self.inventory = inventory
+        self.y = y
+        self.x = x
+    
+    name=""
+
 # used for translating text files into levels
 key = {
     "T":Tile, # This should never be used
     "#":Wall,
     ".":Floor,
     " ":Void,
+    "P":Player, # Used in printing the level
     "C":None, # TODO add Chest
     "S":None, # TODO add Stairs
     "D":None, # TODO add Door
