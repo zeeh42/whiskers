@@ -1,8 +1,12 @@
 import config as C
 import sprites as S
+from tools import *
 from pathlib import Path
 
 class level:
+    def __init__(self):
+        self.outOfIndexTile = S.Void()
+
     level = []
 
     def loadLevel(self, levelPath:Path):
@@ -18,7 +22,34 @@ class level:
                 newLevel.append(x)
         self.level = newLevel
 
+    def getTile(self, x, y, level=level):
+        try:
+            return level[y][x]
+        except IndexError:
+            return self.outOfIndexTile
+    
+    def setTile(self, x, y, level, Tile):
+        # Tile doesn't have a specfic type because it is also used in getLevelAsPrint()
+        newLevel = level
+        try:
+            newLevel[y][x] = Tile
+            return newLevel
+        except IndexError:
+            raise IndexError(f"Tile {x}, {y} is out of this world!")
+            
+
+    def getLevelAsPrint(self, player):
+        printLevel = self.level
+        #printLevel = self.setTile(player.x, player.y, printLevel)
+
+        stringToReturn = ""
+        for i, line in enumerate(printLevel):
+            for tile in line:
+                stringToReturn += IO.keyToValueDict(S.key)[tile.__class__] # get the char from the tiletype
+            if i != (len(printLevel)-1): # only add newline if not lastline
+                stringToReturn += "\n"
+        return stringToReturn
+
 level = level()
 level.loadLevel(Path("level/test.level"))
-for line in level.level:
-    print(line)
+print(level.getLevelAsPrint(None))
