@@ -1,0 +1,39 @@
++=======TODO=============+
+
++--------level---------+
+level saving (idk if i will add this)
+extra tile level data
+mirror tilekey
+print level
+get tile
+
++--------player--------+
+move
+health / damage
+fights
+
++-------menus----------+
+view level
+main menu
+move menu (menu to do stuff)
+
++------mechanics-------+
+fights
+moving
+menus
+inventory
+doors
+next levels
+keys and locks
+levers and pistons (levers and buttons to interact with shit)
+
+
++==DOING / KINDA DONE?===+
+
++--------level---------+
+tile sprites / tile key
+level loading
+
++=======DONE=============+
+
++=======NOT GONNA DO=====+
