@@ -41,26 +41,6 @@ class Player:
     
     name=""
 
-class Menu: # default class for all menus
-    name=""
-    description=""
-    options=[]
-
-    def matchOption(option):
-        pass # overwritten by menu
-
-    def getOption(self, options=options):
-        option = ""
-        while option not in options:
-            option = input().lower()
-        self.matchOption(option)
-
-    def __init__(self):
-        pass
-
-class MainMenu(Menu):
-    name="MainMenu"
-
 # used for translating text files into levels
 key = {
     "T":Tile, # This should never be used
