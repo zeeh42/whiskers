@@ -20,6 +20,9 @@ class Title:
     def getTitle(text, fontname,):
         """returns an ascii banner as a string"""
         font = Title.fonts[fontname]
+
+        # TODO return a banner as a string from the font and the text, i wasted time trying to do this...
+
         return "TODO: get title as string"
 
     @staticmethod
