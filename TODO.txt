@@ -33,6 +33,8 @@ level loading
 
 +------mechanics-------+
 menus
+menus - ascci banners
+menus - ascci banners - create banners from text and font
 
 +=======DONE=============+
 
