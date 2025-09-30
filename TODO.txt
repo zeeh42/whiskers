@@ -18,7 +18,6 @@ move menu (menu to do stuff)
 +------mechanics-------+
 fights
 moving
-menus
 inventory
 doors
 next levels
@@ -32,6 +31,8 @@ levers and pistons (levers and buttons to interact with shit)
 tile sprites / tile key
 level loading
 
++------mechanics-------+
+menus
 
 +=======DONE=============+
 
