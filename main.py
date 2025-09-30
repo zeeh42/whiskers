@@ -49,8 +49,3 @@ class level:
             if i != (len(printLevel)-1): # only add newline if not lastline
                 stringToReturn += "\n"
         return stringToReturn
-
-level = level()
-player = S.Player(x=1, y=1, maxHealth=100, inventory=None)
-level.loadLevel(Path("level/test.level"))
-print(level.getLevelAsPrint(player))
