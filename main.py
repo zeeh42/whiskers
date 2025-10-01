@@ -5,11 +5,12 @@ from pathlib import Path
 
 class MenuManager:
     currentMenu = ""
-    def setMenu(self, menu):
-        self.currentMenu = menu
+    def mainMenu(self):
+        self.currentMenu = "mainMenu"
+        IO.printFromFile("assets/text/main_menu.txt")
     
 
-class level:
+class Level:
     def __init__(self):
         self.outOfIndexTile = S.Void()
 
@@ -55,3 +56,7 @@ class level:
             if i != (len(printLevel)-1): # only add newline if not lastline
                 stringToReturn += "\n"
         return stringToReturn
+
+level = Level()
+menuManager = MenuManager()
+menuManager.mainMenu()

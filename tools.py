@@ -9,6 +9,10 @@ class IO:
         """returns a list where all the values are the keys"""
         newDict = {v: k for k, v in dict.items()}
         return newDict
+    
+    def printFromFile(file:str):
+        with open(Path(file)) as f:
+            print(f.read())
 
 class Title:
     """text to ascii class"""
